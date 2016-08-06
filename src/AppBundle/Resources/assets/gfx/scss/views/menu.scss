@@ -1,0 +1,100 @@
+@import '../helpers/mixins';
+
+header {
+  width: 100%;
+  margin-left:-15px;
+  margin-right: -15px;
+  ul{
+    list-style: none;
+    display: inline-block;
+    li {
+      display: inline-block;
+      margin: 0 3px 0 3px;
+    }
+  }
+}
+
+.menu--container{
+
+  @include mobile{
+    height: 50px;
+  }
+
+  @include tablet{
+    height: 60px;
+  }
+
+  @include desktop{
+    height: 60px;
+  }
+
+  .menu--subcontainer{
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #c7c4c4;
+    @include flexbox;
+
+    &.menu--fixed{
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+
+    .menu--items{
+      margin: 0 auto;
+
+      @include mobile{
+        width: 340px;
+      }
+
+      @include tablet{
+        width: 730px;
+      }
+
+      @include desktop{
+        width: 900px;
+      }
+
+      .menu--logo{
+        @include mobile{
+          width: 72%;
+          text-align: center;
+          font-size: 17px;
+        }
+      }
+      .menu--links-top{
+        @include gt-mobile{
+          display: inline-block;
+          li:hover{
+            text-decoration: underline;
+          }
+        }
+        @include mobile{
+          display: none;
+        }
+      }
+      .menu--shopping-cart{
+        float:right;
+        cursor: pointer;
+        &:focus{
+          outline: none;
+        }
+        @include mobile{
+          padding-left: 0;
+        }
+        .menu--shopping-cart--icon{
+          height: 18px;
+        }
+        .menu--shopping-cart--items-cart{
+          vertical-align: top;
+          margin-left: 5px;
+          display: none;
+        }
+      }
+
+    }
+  }
+}

@@ -28,6 +28,9 @@ Hint: the HTML with the button is in: `app/Resources/views/default/index.html.tw
 
 5. Make "Add Product to Cart" increment the number in "Go to checkout". That number should not lose its value after page refresh
 
+* Value of the cart loaded/stored on LocalStorage considering there is not backend built to update values via AJAX POST
+      
+
 6. Prepare a responsive checkout according to the design file found in the app root `acme-checkout.pdf`. It should show the same amount of products you have in header. 
 Hint: HTML for that page is in `src/AppBundle/Resources/views/Checkout/cart.html.twig`
 

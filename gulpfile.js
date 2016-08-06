@@ -10,17 +10,17 @@ var gulp = require('gulp'),
 
 // Paths where JS/CSS are located
 var path_js_files = 'src/AppBundle/Resources/assets/js/*.js';
-var path_sass_files = 'src/AppBundle/Resources/assets/gfx/scss/*.scss';
+var path_sass_files = 'src/AppBundle/Resources/assets/gfx/scss/**/*.scss';
 
 // Task to process JS files
 gulp.task('process-js',function(){
     var destination_min_js = 'web/bundles/app/js/';
     return gulp.src(path_js_files)
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
-    .pipe(rename('main.min.js'))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(destination_min_js));
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(rename('main.min.js'))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(destination_min_js));
 });
 
 // Build CSS from SASS files

@@ -1,31 +1,54 @@
+@import 'helpers/mixins';
+@import 'views/menu';
+@import 'views/home';
 
-html, body {
-  margin: 0;
-  height: 100%;
+html,body{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+body{
+  margin:0 15px 0 15px;
 }
 
-header {
-  flex: 1 0 10%;
-  border: 1px solid #000;
-  ul{
-    list-style: none;
-    li {
-      display: inline-block;
-    }
+a{
+  color:black;
+  text-decoration: none;
+}
+
+article,.footer--container{
+  margin: 0 auto;
+
+  @include mobile{
+    width: 340px;
   }
-}
 
-article{
-  flex: auto;
-  overflow-y: auto;
+  @include tablet{
+    width: 730px;
+  }
+
+  @include desktop{
+    width: 900px;
+  }
+
 }
 
 footer {
-  height: 40px;
-  border: 1px solid #000;
+  height: 55px;
+  margin: 25px -15px 0 -15px;
+  border-top: 1px solid #c7c4c4;
+  
+  .footer--container{
+    .footer--copyright{
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .footer--icons-social-media{
+      display: inline;
+      cursor: pointer;
+      float:right;
+    }
+  }
 }
