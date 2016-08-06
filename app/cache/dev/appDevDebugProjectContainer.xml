@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/var/www/recruitment/sample-app/app</parameter>
+    <parameter key="kernel.root_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">/var/www/recruitment/sample-app/app/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/var/www/recruitment/sample-app/app/logs</parameter>
+    <parameter key="kernel.cache_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -81,7 +81,7 @@
     <parameter key="debug.errors_logger_listener.class">Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher</parameter>
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
-    <parameter key="debug.container.dump">/var/www/recruitment/sample-app/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Component\HttpKernel\Controller\TraceableControllerResolver</parameter>
     <parameter key="kernel.secret">3a8799bf56c402b9b32af5f7a1713cf47405dcdc</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
@@ -97,7 +97,7 @@
     <parameter key="session.handler.native_file.class">Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler</parameter>
     <parameter key="session_listener.class">Symfony\Bundle\FrameworkBundle\EventListener\SessionListener</parameter>
     <parameter key="session.storage.options" type="collection"/>
-    <parameter key="session.save_path">/var/www/recruitment/sample-app/app/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/sessions</parameter>
     <parameter key="form.resolved_type_factory.class">Symfony\Component\Form\ResolvedFormTypeFactory</parameter>
     <parameter key="form.registry.class">Symfony\Component\Form\FormRegistry</parameter>
     <parameter key="form.factory.class">Symfony\Component\Form\FormFactory</parameter>
@@ -153,7 +153,7 @@
     <parameter key="validator.mapping.loader.yaml_files_loader.class">Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader</parameter>
     <parameter key="validator.validator_factory.class">Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory</parameter>
     <parameter key="validator.mapping.loader.xml_files_loader.mapping_files" type="collection">
-      <parameter>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</parameter>
+      <parameter>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</parameter>
     </parameter>
     <parameter key="validator.mapping.loader.yaml_files_loader.mapping_files" type="collection"/>
     <parameter key="validator.translation_domain">validators</parameter>
@@ -170,7 +170,7 @@
     <parameter key="data_collector.router.class">Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/var/www/recruitment/sample-app/app/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/profiler</parameter>
     <parameter key="profiler.storage.username"></parameter>
     <parameter key="profiler.storage.password"></parameter>
     <parameter key="profiler.storage.lifetime">86400</parameter>
@@ -194,7 +194,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/var/www/recruitment/sample-app/app/cache/dev/assetic/routing.yml</parameter>
+    <parameter key="router.resource">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/assetic/routing.yml</parameter>
     <parameter key="router.cache_class_prefix">appDev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -299,7 +299,7 @@
         <parameter>Symfony\Bundle\TwigBundle\TwigDefaultEscapingStrategy</parameter>
         <parameter>guess</parameter>
       </parameter>
-      <parameter key="cache">/var/www/recruitment/sample-app/app/cache/dev/twig</parameter>
+      <parameter key="cache">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/twig</parameter>
       <parameter key="charset">UTF-8</parameter>
       <parameter key="paths" type="collection"/>
     </parameter>
@@ -381,7 +381,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/var/www/recruitment/sample-app/app/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -406,7 +406,7 @@
     <parameter key="assetic.worker.cache_busting.class">Assetic\Factory\Worker\CacheBustingWorker</parameter>
     <parameter key="assetic.value_supplier.class">Symfony\Bundle\AsseticBundle\DefaultValueSupplier</parameter>
     <parameter key="assetic.node.paths" type="collection"/>
-    <parameter key="assetic.cache_dir">/var/www/recruitment/sample-app/app/cache/dev/assetic</parameter>
+    <parameter key="assetic.cache_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/assetic</parameter>
     <parameter key="assetic.bundles" type="collection"/>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
@@ -416,11 +416,11 @@
     <parameter key="assetic.debug">true</parameter>
     <parameter key="assetic.use_controller">true</parameter>
     <parameter key="assetic.enable_profiler">false</parameter>
-    <parameter key="assetic.read_from">/var/www/recruitment/sample-app/app/../web</parameter>
-    <parameter key="assetic.write_to">/var/www/recruitment/sample-app/app/../web</parameter>
+    <parameter key="assetic.read_from">/Users/manueljlopez/Documents/YoungSkilledTask/app/../web</parameter>
+    <parameter key="assetic.write_to">/Users/manueljlopez/Documents/YoungSkilledTask/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
     <parameter key="assetic.java.bin">/usr/bin/java</parameter>
-    <parameter key="assetic.node.bin">/usr/bin/node</parameter>
+    <parameter key="assetic.node.bin">/usr/local/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/local/bin/sass</parameter>
     <parameter key="assetic.reactjsx.bin">/usr/bin/jsx</parameter>
@@ -538,7 +538,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/var/www/recruitment/sample-app/app/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -758,7 +758,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/var/www/recruitment/sample-app/app/Resources</argument>
+                <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/Resources</argument>
               </service>
             </argument>
             <argument type="service" id="templating.locator"/>
@@ -784,7 +784,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/var/www/recruitment/sample-app/app/Resources</argument>
+                <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/Resources</argument>
               </service>
             </argument>
           </service>
@@ -806,7 +806,7 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/var/www/recruitment/sample-app/app/Resources</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/Resources</argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
       <argument>3a8799bf56c402b9b32af5f7a1713cf47405dcdc</argument>
@@ -878,7 +878,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">/var/www/recruitment/sample-app/app/cache/dev/translations</argument>
+        <argument key="cache_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
     </service>
@@ -1288,7 +1288,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/var/www/recruitment/sample-app/app/cache/dev</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev</argument>
     </service>
     <service id="templating.helper.slots" class="Symfony\Component\Templating\Helper\SlotsHelper">
       <tag name="templating.helper" alias="slots"/>
@@ -1326,7 +1326,7 @@
     <service id="templating.helper.code" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper">
       <tag name="templating.helper" alias="code"/>
       <argument>null</argument>
-      <argument>/var/www/recruitment/sample-app/app</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="templating.helper.translator" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper">
@@ -1386,7 +1386,7 @@
             <argument type="service">
               <service class="Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader" public="false">
                 <argument type="collection">
-                  <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+                  <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
                 </argument>
               </service>
             </argument>
@@ -1409,7 +1409,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:/var/www/recruitment/sample-app/app/cache/dev/profiler</argument>
+          <argument>file:/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/profiler</argument>
           <argument></argument>
           <argument></argument>
           <argument>86400</argument>
@@ -1619,7 +1619,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>57a1be5aac4db</argument>
+            <argument>57a5a4d07433a</argument>
           </service>
         </argument>
       </argument>
@@ -1726,7 +1726,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>57a1be5aac4db</argument>
+            <argument>57a5a4d07433a</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -1771,7 +1771,7 @@
           <argument>Symfony\Bundle\TwigBundle\TwigDefaultEscapingStrategy</argument>
           <argument>guess</argument>
         </argument>
-        <argument key="cache">/var/www/recruitment/sample-app/app/cache/dev/twig</argument>
+        <argument key="cache">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
       </argument>
@@ -1820,7 +1820,7 @@
           <service class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
             <tag name="twig.extension"/>
             <argument>null</argument>
-            <argument>/var/www/recruitment/sample-app/app</argument>
+            <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app</argument>
             <argument>UTF-8</argument>
           </service>
         </argument>
@@ -1919,7 +1919,7 @@
       <argument>true</argument>
     </service>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/var/www/recruitment/sample-app/app/logs/dev.log</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -1969,7 +1969,7 @@
             </argument>
             <argument type="service">
               <service class="Assetic\Cache\ConfigCache" public="false">
-                <argument>/var/www/recruitment/sample-app/app/cache/dev/assetic/config</argument>
+                <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/assetic/config</argument>
               </service>
             </argument>
             <argument>true</argument>
@@ -1983,7 +1983,7 @@
             <tag name="assetic.formula_resource" loader="twig"/>
             <argument type="service" id="templating.loader"/>
             <argument></argument>
-            <argument>/var/www/recruitment/sample-app/app/Resources/views</argument>
+            <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/Resources/views</argument>
             <argument>/\.[^.]+\.twig$/</argument>
           </service>
         </argument>
@@ -1996,7 +1996,7 @@
       <argument type="service">
         <service class="Symfony\Component\DependencyInjection\ParameterBag\ParameterBag" factory-method="getParameterBag" factory-service="service_container" public="false"/>
       </argument>
-      <argument>/var/www/recruitment/sample-app/app/../web</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/../web</argument>
       <argument>true</argument>
       <call method="addWorker">
         <argument type="service">
@@ -2013,7 +2013,7 @@
       <argument type="service" id="assetic.asset_manager"/>
       <argument type="service">
         <service class="Assetic\Cache\FilesystemCache" public="false">
-          <argument>/var/www/recruitment/sample-app/app/cache/dev/assetic/assets</argument>
+          <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/assetic/assets</argument>
         </service>
       </argument>
       <argument>false</argument>
@@ -2096,17 +2096,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_b7410b4e8787166031e9918bea67fede760e066c6a4c04b5e321ce0cc1f0b99f</argument>
+        <argument>sf2orm_default_2ffd142559efabf7e1307ce5396b58f9d2002ad3ad982c152e1584e34c8bd1df</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_b7410b4e8787166031e9918bea67fede760e066c6a4c04b5e321ce0cc1f0b99f</argument>
+        <argument>sf2orm_default_2ffd142559efabf7e1307ce5396b58f9d2002ad3ad982c152e1584e34c8bd1df</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_b7410b4e8787166031e9918bea67fede760e066c6a4c04b5e321ce0cc1f0b99f</argument>
+        <argument>sf2orm_default_2ffd142559efabf7e1307ce5396b58f9d2002ad3ad982c152e1584e34c8bd1df</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\ORM\Mapping\DefaultEntityListenerResolver"/>
@@ -2139,7 +2139,7 @@
                   <argument type="service">
                     <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
                       <argument type="collection">
-                        <argument key="/var/www/recruitment/sample-app/src/AppBundle/Resources/config/doctrine">AppBundle\Entity</argument>
+                        <argument key="/Users/manueljlopez/Documents/YoungSkilledTask/src/AppBundle/Resources/config/doctrine">AppBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2152,7 +2152,7 @@
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>/var/www/recruitment/sample-app/app/cache/dev/doctrine/orm/Proxies</argument>
+            <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -2300,7 +2300,7 @@
       <argument>bottom</argument>
     </service>
     <service id="sensio_distribution.webconfigurator" class="Sensio\Bundle\DistributionBundle\Configurator\Configurator">
-      <argument>/var/www/recruitment/sample-app/app</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app</argument>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>
@@ -2454,10 +2454,10 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>/var/www/recruitment/sample-app/app/cache/dev/sessions</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/sessions</argument>
     </service>
     <service id="session.handler" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-      <argument>/var/www/recruitment/sample-app/app/cache/dev/sessions</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/sessions</argument>
     </service>
     <service id="templating.loader" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\FilesystemLoader">
       <argument type="service" id="templating.locator"/>
@@ -2497,9 +2497,9 @@
     <service id="router" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
       <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
-      <argument>/var/www/recruitment/sample-app/app/cache/dev/assetic/routing.yml</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/assetic/routing.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/var/www/recruitment/sample-app/app/cache/dev</argument>
+        <argument key="cache_dir">/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -2519,7 +2519,7 @@
       <argument type="service">
         <service class="Doctrine\Common\Annotations\AnnotationReader" public="false"/>
       </argument>
-      <argument>/var/www/recruitment/sample-app/app/cache/dev/annotations</argument>
+      <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/cache/dev/annotations</argument>
       <argument>true</argument>
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
@@ -2530,42 +2530,42 @@
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/src/AppBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/src/AppBundle/Resources/views</argument>
         <argument>App</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views</argument>
         <argument>SensioDistribution</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/app/Resources/views</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/recruitment/sample-app/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/Users/manueljlopez/Documents/YoungSkilledTask/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="logger" class="Symfony\Bridge\Monolog\Logger">
