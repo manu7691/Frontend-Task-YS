@@ -14,6 +14,10 @@ Please configure gulp and write a gulp task that we can run from app root folder
 Source SCSS: `src/AppBundle/Resources/assets/gfx/scss/main.scss`
 Target CSS: `src/AppBundle/Resources/public/css/main.css`
 
+* **[Target CSS]** I changed to `web/bundles/app/css/` considering html template was loading files from bundles folder
+
+* In both cases, I minified the files to improve performance (load time page)
+
 2. Convert menu to sticky menu, 
 Hint: the layout file is in `app/Resources/views/base.html.twig` 
 
