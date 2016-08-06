@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     // Create sourcemaps for JS/CSS files
     sourcemaps = require('gulp-sourcemaps'),
     // Minify JS files and remove comments on it
-    minify = require('gulp-minify'),
+    uglify = require('gulp-uglify'),
     // Process SASS - CSS
     sass = require('gulp-sass'),
     // Rename files
@@ -17,11 +17,8 @@ gulp.task('process-js',function(){
     var destination_min_js = 'web/bundles/app/js/';
     return gulp.src(path_js_files)
     .pipe(sourcemaps.init())
-    .pipe(minify({
-        ext:{
-             min:'.min.js'
-        }}
-    ))
+    .pipe(uglify())
+    .pipe(rename('main.min.js'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(destination_min_js));
 });
@@ -29,13 +26,13 @@ gulp.task('process-js',function(){
 // Build CSS from SASS files
 gulp.task('process-sass',function(){
     var destination_min_css = 'web/bundles/app/css/';
-    return gulp.src([path_sass_files])
+    return gulp.src(path_sass_files)
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(sourcemaps.write('./',{includeContent: false}))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(destination_min_css));
 });
 
