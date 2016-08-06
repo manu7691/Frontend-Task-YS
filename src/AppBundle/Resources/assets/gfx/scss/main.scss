@@ -1,16 +1,31 @@
-header{
-  border:1px solid #000;
-  width:100%;
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 1 0 10%;
+  border: 1px solid #000;
   ul{
     list-style: none;
     li {
-      display:inline-block;
+      display: inline-block;
     }
   }
 }
 
-footer{
-  border:1px solid #000;
-  width:100%;
+article{
+  flex: auto;
+  overflow-y: auto;
+}
+
+footer {
+  height: 40px;
+  border: 1px solid #000;
 }
