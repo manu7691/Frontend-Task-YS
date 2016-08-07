@@ -1,11 +1,13 @@
 @import "../helpers/mixins";
 
+// Button add to cart
 .btn_add_cart{
   @include button-bg(purple);
   float: right;
   display: inline-block;
 }
 
+// Button to show notification
 .btn_notify{
   @include button-bg(red);
   float:right;
@@ -13,19 +15,22 @@
   margin-right: 15px;
 }
 
+// Panel where notification is shown
 .notifications{
   height: auto;
+  // Style for the message which is shown
   .messages > div{
     margin-top:5px;
     padding: 15px;
     font-weight: bold;
     background: rgba(255, 175, 14, 0.36);
-    border-radius: 3px;
+    @include border-radius(3px);
     font-size: 1em;
     font-family:'Conv_trade-gothic-light-1361519975',Sans-Serif;
   }
 }
 
+// Style for the container of the product, make some spaces
 .container__icons_actions_product{
   margin-top:10px;
   @include mobile{
@@ -33,6 +38,7 @@
   }
 }
 
+// Style for dealing with title and price of the item
 .container__product_detail{
   display: inline-block;
   .item_name,.item_price{

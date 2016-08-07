@@ -5,14 +5,18 @@
 @import 'views/home';
 @import 'views/checkout';
 
+// Apply font to specific elements
 header,footer,h1,h2,h3,h4,h5{
   font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
 }
 
+
+// Apply font to paragraphs
 p{
   font-family:'Conv_trade-gothic-light-1361519975',Sans-Serif;
 }
 
+// Disallow select texts by user
 html{
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -20,15 +24,18 @@ html{
   -ms-user-select: none;
 }
 
+// Set margin to the page
 body{
   margin:0 15px 0 15px;
 }
 
+// Remove underline to links and set black color
 a{
   color:black;
   text-decoration: none;
 }
 
+// Set width to main body(container) and footer to center elements
 article,.footer__container{
   margin: 0 auto;
 
@@ -45,6 +52,7 @@ article,.footer__container{
   }
 }
 
+// Used for sticky footer on mobile resolutions
 article{
   @include mobile{
     margin-top: 25px;
@@ -54,6 +62,7 @@ article{
   }
 }
 
+// Styles for footer
 footer {
   height: 55px;
   margin: 25px -15px 0 -15px;

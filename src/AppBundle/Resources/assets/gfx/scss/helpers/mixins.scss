@@ -2,7 +2,7 @@
 Mixins
 */
 
-
+// Mixin to display Element as Flexbox
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -11,28 +11,47 @@ Mixins
   display: flex;
 }
 
+// Mixin to create a circle with size as parameter
 @mixin circle($s){
   border-radius: 50%;
   width: $s;
   height: $s;
 }
 
+// Mixin to set border radius to different browsers
 @mixin border-radius($r){
   border-radius: $r;
   -moz-border-radius: $r;
   -webkit-border-radius: $r;
 }
 
+// Mixin to draw a line, it helps to create arrow on <select>
+@mixin draw-line-triangle($deg){
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #ffffff;
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+  position: absolute;
+  top: -6px;
+}
+
+// Standard button
 .btn {
   color: #ffffff;
   text-decoration: none;
   padding: 10px 10px;
-  border-radius: 2px;
+  @include border-radius(2px);
   font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
   font-size: 14px;
   cursor: pointer;
 }
 
+// Mixin to set background to a button with transition between hover/non-hover state or active
 @mixin button-bg($bg) {
   @extend .btn;
   background: $bg;
@@ -46,27 +65,33 @@ Mixins
 }
 
 
+/*
+Mixins to take care of responsiveness
+*/
+
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+// Mobile resolutions less than 768 px
 @mixin mobile {
   @media all and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }
-
+// Tablet resolutions 768 - 1023px
 @mixin tablet {
   @media all and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
-
+// Desktop resolutions more than 1024 px
 @mixin desktop {
   @media all and (min-width: #{$desktop-width}) {
     @content;
   }
 }
 
+// From resolutions bigger than 768 px
 @mixin gt-mobile {
   @media all and (min-width: #{$tablet-width}) {
     @content;

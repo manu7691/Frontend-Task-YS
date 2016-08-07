@@ -1,5 +1,6 @@
 @import '../helpers/mixins';
 
+// Styles for header
 header {
   width: 100%;
   margin-left:-15px;
@@ -14,6 +15,7 @@ header {
   }
 }
 
+// Deal with different heights of the menu, depending resolution
 .menu__container{
 
   @include mobile{
@@ -28,6 +30,7 @@ header {
     height: 60px;
   }
 
+  // Menu, links, logo, cart, hamburger icons
   .menu__subcontainer{
 
     position: absolute;
@@ -64,7 +67,7 @@ header {
         padding-left: 0;
         @include mobile{
           text-align: center;
-          width: 74%;
+          width: 70%;
         }
       }
       .menu__links_top{
@@ -121,6 +124,7 @@ header {
     }
   }
 
+  // Submenu with links, when mobile resolution
   .menu__items_mobile{
     margin-top: 54px;
     border-bottom: 1px solid #ccc;

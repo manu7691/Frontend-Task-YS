@@ -1,8 +1,10 @@
 @import '../helpers/mixins';
 
 .checkout{
+
   font-family:'Conv_trade-gothic-light-1361519975',Sans-Serif;
 
+  // Divide forms on two columns
   .checkout__forms{
     @include flexbox;
     .checkout__form_user,.checkout__cart{
@@ -23,6 +25,149 @@
       }
     }
   }
+
+  // Styles for labels and inputs on form checkout
+  label{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 14px;
+    input{
+      display: block;
+      margin-top: 10px;
+      height: 35px;
+      border: 1px solid #c7c4c4;
+      padding-left: 15px;
+      font-weight: 600;
+      width: 100%;
+      @include border-radius(2px);
+      &:focus{
+        outline: none;
+        border: 1px solid purple;
+      }
+    }
+  }
+
+  // Titles
+  .checkout__title{
+    text-transform: uppercase;
+    &.centered{
+      text-align: center;
+    }
+  }
+
+  // Draw a circle for required fields
+  .circle__required{
+    @include circle(5px);
+    background: #ff128b;
+    position: relative;
+    display: inline-block;
+    top: -5px;
+    left: 5px;
+  }
+
+  // Styles for Select, including draw a triangle
+  select{
+    background: #ffffff;
+    border:none;
+    height: 100%;
+    width: 100%;
+    &:focus{
+      outline: none;
+    }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .select{
+    overflow: hidden;
+    height: 35px;
+    margin-top: 15px;
+    padding-left: 15px;
+    position: relative;
+    display: block;
+    @include border-radius(2px);
+    border: 1px solid #ccc;
+    &:focus{
+      outline: none;
+      border: 1px solid purple;
+    }
+    &:after {
+      content: "";
+      color: #ffffff;
+      padding: 12px 8px;
+      position: absolute; right: 0; top: 0;
+      background: black;
+      z-index: 1;
+      text-align: center;
+      width: 30px;
+      height: 100%;
+      pointer-events: none;
+      box-sizing: border-box;
+    }
+  }
+
+  .triangle {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    margin-top: -10px;
+    margin-right: 7px;
+    z-index: 2;
+  }
+  .triangle>div {
+    width: 20px;
+    height: 2px;
+    background: transparent;
+  }
+
+  .triangle>div:before {
+    @include draw-line-triangle(130deg);
+    right: 0;
+  }
+  .triangle>div:after {
+    @include draw-line-triangle(-130deg);
+    left: 5px;
+  }
+
+  // Button checkout
+  .btn_checkout{
+    @include button-bg(purple);
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 15px 9px;
+    &.disabled{
+      pointer-events: none;
+    }
+  }
+
+
+  // Dealing with errors on Form Checkout
+  .data--is_invalid{
+    display: none;
+  }
+  .error{
+    input,.select{
+      border:1px solid red;
+      &:focus{
+        border:1px solid red;
+      }
+    }
+
+    .data--is_invalid{
+      display: inline-block;
+      margin-top: 10px;
+      color: red;
+    }
+    .error-format{
+      display:none;
+    }
+  }
+
+  // Styles for Cart column
 
   .checkout__cart_item{
     border-bottom: 1px solid #c7c4c4;
@@ -63,89 +208,6 @@
 
   .checkout__cart_empty{
     display: none;
-  }
-
-  label{
-    display: block;
-    margin-bottom: 15px;
-    font-weight: bolder;
-    font-size: 14px;
-    input{
-      display: block;
-      margin-top: 10px;
-      height: 35px;
-      border: 1px solid #c7c4c4;
-      padding-left: 15px;
-      font-weight: 600;
-      width: 100%;
-      @include border-radius(2px);
-      &:focus{
-        outline: none;
-        border: 1px solid purple;
-      }
-    }
-  }
-  .checkout__title{
-    text-transform: uppercase;
-    &.centered{
-      text-align: center;
-    }
-  }
-
-  .circle__required{
-    @include circle(5px);
-    background: #ff128b;
-    position: relative;
-    display: inline-block;
-    top: -5px;
-    left: 5px;
-  }
-
-  .btn_checkout{
-    @include button-bg(purple);
-    text-transform: uppercase;
-    font-size: 14px;
-    text-align: center;
-    width: 100%;
-    padding: 15px 9px;
-    &.disabled{
-      pointer-events: none;
-    }
-  }
-  select{
-    width: 100%;
-    height: 40px;
-    margin-top: 15px;
-    overflow: hidden;
-    background: #ffffff;
-    @include border-radius(2px);
-    border: 1px solid #ccc;
-    &:focus{
-      outline: none;
-      border: 1px solid purple;
-    }
-  }
-
-  // Dealing with errors on Form Checkout
-  .data--is_invalid{
-    display: none;
-  }
-  .error{
-    input,select{
-      border:1px solid red;
-      &:focus{
-        border:1px solid red;
-      }
-    }
-
-    .data--is_invalid{
-      display: inline-block;
-      margin-top: 10px;
-      color: red;
-    }
-    .error-format{
-      display:none;
-    }
   }
 
 }

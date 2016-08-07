@@ -1,11 +1,13 @@
 @import 'mixins';
 
+// Make element visible only on mobile resolutions
 .only-visible-mobile{
   display: block;
   @include gt-mobile{
     display: none;
   }
 }
+// Make element visible on gt mobile resolutions
 .hidden-mobile{
   display: inline-block;
   @include mobile{

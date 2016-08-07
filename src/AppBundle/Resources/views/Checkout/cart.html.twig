@@ -47,11 +47,16 @@
                     </label>
                     <label for="form_country">
                         Country <span class="circle__required"></span>
-                        <select id="form_country" required="required">
-                            <option value="">Choose Country</option>
-                            <option value="US">United States</option>
-                            <option value="PL">Poland</option>
-                        </select>
+                        <div class="select">
+                            <select id="form_country" required="required">
+                                <option value="">Choose Country</option>
+                                <option value="US">United States</option>
+                                <option value="PL">Poland</option>
+                            </select>
+                            <div class="triangle">
+                                <div></div>
+                            </div>
+                        </div>
                         <div class="data--is_invalid">It can't be empty</div>
                     </label>
                 </div>
@@ -101,7 +106,6 @@
                             <label for="checkout__cart_total_shipping">Shipping<span>-</span></label>
                             <label for="checkout__cart_total_total"><strong>Total</strong><span>-</span></label>
                         </div>
-
                     </div>
                 </div>
 
@@ -122,79 +126,19 @@
 {% block javascripts %}
 
     <script>
-        $(function(){
-            var currency = 'PLN';
-            var shippingCost = 20;
-            var taxPercentage = 19;
-            var randomPrice = 40;
-            var numItemsCart = localStorage['items_cart'] || 0; /* for integers */
-            if(numItemsCart == 0){
-                $('.checkout__cart_item').remove();
-                $('.checkout__cart_total').remove();
-                $('.checkout__cart_empty').show();
-            }else{
-                var total = (numItemsCart * randomPrice) + shippingCost;
-                var taxes = total * (taxPercentage/100);
-                var subtotal = total - taxes;
-
-                $("label[for='checkout__cart_item_qty'] span").html(numItemsCart);
-                $("label[for='checkout__cart_item_price'] span").html(randomPrice+currency);
-
-                $("label[for='checkout__cart_total_subtotal'] span").html(subtotal+currency);
-                $("label[for='checkout__cart_total_tax'] span").html(taxes+currency);
-                $("label[for='checkout__cart_total_shipping'] span").html(shippingCost+currency);
-                $("label[for='checkout__cart_total_total'] span").html(total+'PLN');
-            }
-
-
-            $.fn.hasAttr = function(name) {
-                return this.attr(name) !== undefined;
-            };
-            function validateEmail(email) {
-                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(email);
-            }
 
             $formCheckout = $('.checkout__form_user  label input');
             $btnCheckout = $('.btn_checkout');
-
-            $formCheckout.on('change focus keyup',function(){
-                if(!$(this).val() && $(this).hasAttr('required')){
-                    $(this).parent().addClass('error');
-                }else{
-                    if($(this).parent().hasClass('error')){
-                        if(($(this)[0].id === 'form_email' && !validateEmail($(this).val()))){
-                            $('.error-format').show();
-                        }else{
-                            if($(this)[0].id === 'form_email'){
-                                $('.error-format').hide();
-                            }
-                            $(this).parent().removeClass('error');
-                        }
-                    }
-                }
-            });
-
             $selectCountry = $('.checkout__form_user  label select ');
-            $selectCountry.on('change',function(){
-                if(!$(this).val()){
-                    $(this).parent().addClass('error');
-                }else if($(this).parent().hasClass('error')){
-                    $(this).parent().removeClass('error');
-                }
-            });
 
-            $btnCheckout.on('click',function(){
-                $formCheckout.trigger('change');
-                $selectCountry.trigger('change');
-                setTimeout(function(){
-                    if(!$formCheckout.parent().hasClass('error') && !$selectCountry.parent().hasClass('error'))
-                        alert('Checkout Complete! :D')
-                },200);
+            updateBasket();
 
-            });
+            CheckInputsCheckoutForm($formCheckout);
 
-        });
+            CheckSelectCheckoutForm($selectCountry);
+
+            isValidCheckoutForm([$btnCheckout,$formCheckout,$selectCountry]);
+
     </script>
 
 {% endblock %}
