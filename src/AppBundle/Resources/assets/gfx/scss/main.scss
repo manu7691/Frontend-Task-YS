@@ -3,6 +3,7 @@
 @import 'helpers/common';
 @import 'views/menu';
 @import 'views/home';
+@import 'views/checkout';
 
 header,footer,h1{
   font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
@@ -48,7 +49,7 @@ article{
   @include mobile{
     margin-top: 25px;
     &.menu--expanded{
-      margin-top: 115px;
+      margin-top: 170px;
     }
   }
 }

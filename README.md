@@ -39,6 +39,8 @@ Hint: HTML for that page is in `src/AppBundle/Resources/views/Checkout/cart.html
 **General Hints**:
 - to run the app you only need php installed. go to the app root folder and run `php app/console server:run`
 - to deploy CSS files from `src/AppBundle/Resources/public/css/`, use `php app/console assets:install`
+- to run Gulpfile, you need to install npm first, and later run `npm install` ( so dependencies from package.json can be installed)
+- After installing gulp, you have to run `gulp` 
 
 **Nice-to-Have**
 - BEM (http://getbem.com/naming/) in the project structure

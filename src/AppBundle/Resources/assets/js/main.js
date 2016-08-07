@@ -1,7 +1,9 @@
 // On document loaded, considering js is loaded before body elements
 $(function(){
     // selector notify button
-    $notificationButton = $('.notify');
+    $notificationButton = $('.btn_notify');
+    //responsive menu
+    $menuMobile = $('.menu__items_mobile');
 
     // Notify button on click event
     $notificationButton.click(function(){
@@ -32,9 +34,12 @@ $(function(){
     $header = $('header');
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
-            $menu.addClass("menu--fixed");
+            $menu.addClass('is--fixed');
+            $menuMobile.addClass('is--fixed');
+
         } else {
-            $menu.removeClass("menu--fixed");
+            $menu.removeClass('is--fixed');
+            $menuMobile.removeClass('is--fixed');
         }
     });
 
@@ -53,7 +58,6 @@ $(function(){
     // Menu expanded
 
     $('.menu__hamburger').click(function(){
-        $menuMobile = $('.menu__items_mobile');
         $article = $('article');
         $iconHamburger = $('.menu__hamburger__icon');
         $iconClose = $('.menu__hamburger_close__icon');
