@@ -1,3 +1,3 @@
-.btn{color:#ffffff;text-decoration:none;padding:5px 10px;border-radius:3px;font-family:'Poiret One', cursive;font-size:1em;cursor:pointer}.only-visible-mobile{display:block}@media all and (min-width: 768px){.only-visible-mobile{display:none}}.hidden-mobile{display:block}@media all and (max-width: 767px){.hidden-mobile{display:none}}
+.btn{color:#ffffff;text-decoration:none;padding:5px 10px;border-radius:3px;font-family:'Conv_trade-gothic-light-1361519975', Sans-Serif;font-size:14px;cursor:pointer}.only-visible-mobile{display:block}@media all and (min-width: 768px){.only-visible-mobile{display:none}}.hidden-mobile{display:inline-block}@media all and (max-width: 767px){.hidden-mobile{display:none}}
 
 /*# sourceMappingURL=common.min.css.map */

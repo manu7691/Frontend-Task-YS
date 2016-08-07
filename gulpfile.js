@@ -42,4 +42,4 @@ gulp.task('watch',function(){
     gulp.watch(path_sass_files,['process-sass']);
 });
 
-gulp.task('default',['watch']);
+gulp.task('default',['watch','process-sass','process-js']);

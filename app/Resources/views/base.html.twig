@@ -12,33 +12,33 @@
     </head>
     <body>
     <header>
-        <div class="menu--container">
-            <div class="menu--subcontainer">
-                <div class="menu--items">
-                    <ul class="menu--logo">
+        <div class="menu__container">
+            <div class="menu__subcontainer">
+                <div class="menu__items">
+                    <ul class="menu__logo">
                         <li><a href="/">Acme Store</a></li>
                     </ul>
-                    <ul class="menu--links-top">
-                        <li><a href="#">New Products</a></li>
-                        <li><a href="#">Summer Collection</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shoes</a></li>
+                    <ul class="menu__links_top">
+                        <li><span>New Products</span></li>
+                        <li><span>Summer Collection</span></li>
+                        <li><span>T-Shirts</span></li>
+                        <li><span>Shoes</span></li>
                     </ul>
-                    <ul class="menu--hamburger">
-                        <li><img class="menu--hamburger--icon" src="{{ asset('bundles/app/icons/hamburger-icon.svg') }}"></li>
-                        <li><img class="menu--hamburger-close--icon" src="{{ asset('bundles/app/icons/close-icon.svg') }}"></li>
+                    <ul class="menu__hamburger">
+                        <li><img class="menu__hamburger__icon" src="{{ asset('bundles/app/icons/hamburger-icon.svg') }}"></li>
+                        <li><img class="menu__hamburger_close__icon" src="{{ asset('bundles/app/icons/close-icon.svg') }}"></li>
                     </ul>
-                    <ul class="menu--shopping-cart">
-                        <li><a href="/cart"><img class="menu--shopping-cart--icon" src="{{ asset('bundles/app/icons/shopping-cart.svg') }}"><span class="menu--shopping-cart--items-cart"></span></a></li>
+                    <ul class="menu__shopping_cart">
+                        <li><a href="/cart"><img class="menu__shopping_cart__icon" src="{{ asset('bundles/app/icons/shopping-cart.svg') }}"><span class="menu__shopping_cart__items_cart"></span></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="menu--items-mobile only-visible-mobile">
-                <ul class="menu--links-top">
-                    <li><a href="#">New Products</a></li>
-                    <li><a href="#">Summer Collection</a></li>
-                    <li><a href="#">T-Shirts</a></li>
-                    <li><a href="#">Shoes</a></li>
+            <div class="menu__items_mobile only-visible-mobile">
+                <ul class="menu__links_top">
+                    <li>New Products</li>
+                    <li>Summer Collection</li>
+                    <li>T-Shirts</li>
+                    <li>Shoes</li>
                 </ul>
             </div>
         </div>
@@ -47,9 +47,9 @@
         {% block body %}{% endblock %}
     </article>
     <footer>
-    <div class="footer--container">
-        <p class="footer--copyright">© 2016 ACME STORE<span class="hidden-mobile">, ALL RIGHTS RESERVED</span></p>
-        <p class="footer--icons-social-media">
+    <div class="footer__container">
+        <div class="footer__copyright">© 2016 ACME STORE<span class="hidden-mobile">, ALL RIGHTS RESERVED</span></div>
+        <p class="footer__icons_social_media">
             <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDkwIDkwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA5MCA5MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGlkPSJGYWNlYm9va19feDI4X2FsdF94MjlfIiBkPSJNOTAsMTUuMDAxQzkwLDcuMTE5LDgyLjg4NCwwLDc1LDBIMTVDNy4xMTYsMCwwLDcuMTE5LDAsMTUuMDAxdjU5Ljk5OCAgIEMwLDgyLjg4MSw3LjExNiw5MCwxNS4wMDEsOTBINDVWNTZIMzRWNDFoMTF2LTUuODQ0QzQ1LDI1LjA3Nyw1Mi41NjgsMTYsNjEuODc1LDE2SDc0djE1SDYxLjg3NUM2MC41NDgsMzEsNTksMzIuNjExLDU5LDM1LjAyNFY0MSAgIGgxNXYxNUg1OXYzNGgxNmM3Ljg4NCwwLDE1LTcuMTE5LDE1LTE1LjAwMVYxNS4wMDF6IiBmaWxsPSIjMDA2REYwIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
             <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDkwIDkwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA5MCA5MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGlkPSJZb3VUdWJlIiBkPSJNNzAuOTM5LDY1LjgzMkg2NmwwLjAyMy0yLjg2OWMwLTEuMjc1LDEuMDQ3LTIuMzE4LDIuMzI2LTIuMzE4aDAuMzE1YzEuMjgyLDAsMi4zMzIsMS4wNDMsMi4zMzIsMi4zMTggICBMNzAuOTM5LDY1LjgzMnogTTUyLjQxMyw1OS42ODRjLTEuMjUzLDAtMi4yNzgsMC44NDItMi4yNzgsMS44NzNWNzUuNTFjMCwxLjAyOSwxLjAyNSwxLjg2OSwyLjI3OCwxLjg2OSAgIGMxLjI1OCwwLDIuMjg0LTAuODQsMi4yODQtMS44NjlWNjEuNTU3QzU0LjY5Nyw2MC41MjUsNTMuNjcxLDU5LjY4NCw1Mi40MTMsNTkuNjg0eiBNODIuNSw1MS44Nzl2MjYuNTQ0ICAgQzgyLjUsODQuNzksNzYuOTc5LDkwLDcwLjIzLDkwSDE5Ljc3MUMxMy4wMiw5MCw3LjUsODQuNzksNy41LDc4LjQyM1Y1MS44NzljMC02LjM2Nyw1LjUyLTExLjU3OCwxMi4yNzEtMTEuNTc4SDcwLjIzICAgQzc2Ljk3OSw0MC4zMDEsODIuNSw0NS41MTIsODIuNSw1MS44Nzl6IE0yMy4xMzcsODEuMzA1bC0wLjAwNC0yNy45NjFsNi4yNTUsMC4wMDJ2LTQuMTQzbC0xNi42NzQtMC4wMjV2NC4wNzNsNS4yMDUsMC4wMTV2MjguMDM5ICAgSDIzLjEzN3ogTTQxLjg4Nyw1Ny41MDloLTUuMjE1djE0LjkzMWMwLDIuMTYsMC4xMzEsMy4yNC0wLjAwOCwzLjYyMWMtMC40MjQsMS4xNTgtMi4zMywyLjM4OC0zLjA3MywwLjEyNSAgIGMtMC4xMjYtMC4zOTYtMC4wMTUtMS41OTEtMC4wMTctMy42NDNsLTAuMDIxLTE1LjAzNGgtNS4xODZsMC4wMTYsMTQuNzk4YzAuMDA0LDIuMjY4LTAuMDUxLDMuOTU5LDAuMDE4LDQuNzI5ICAgYzAuMTI3LDEuMzU3LDAuMDgyLDIuOTM5LDEuMzQxLDMuODQzYzIuMzQ2LDEuNjksNi44NDMtMC4yNTIsNy45NjgtMi42NjhsLTAuMDEsMy4wODNsNC4xODgsMC4wMDVMNDEuODg3LDU3LjUwOUw0MS44ODcsNTcuNTA5eiAgICBNNTguNTcsNzQuNjA3TDU4LjU1OSw2Mi4xOGMtMC4wMDQtNC43MzYtMy41NDctNy41NzItOC4zNTYtMy43NGwwLjAyMS05LjIzOWwtNS4yMDksMC4wMDhsLTAuMDI1LDMxLjg5bDQuMjg0LTAuMDYybDAuMzktMS45ODYgICBDNTUuMTM3LDg0LjA3Miw1OC41NzgsODAuNjMxLDU4LjU3LDc0LjYwN3ogTTc0Ljg5MSw3Mi45NmwtMy45MSwwLjAyMWMtMC4wMDIsMC4xNTUtMC4wMDgsMC4zMzQtMC4wMSwwLjUyOXYyLjE4MiAgIGMwLDEuMTY4LTAuOTY1LDIuMTE5LTIuMTM3LDIuMTE5aC0wLjc2NmMtMS4xNzQsMC0yLjEzOS0wLjk1MS0yLjEzOS0yLjExOVY3NS40NXYtMi40di0zLjA5N2g4Ljk1NHYtMy4zNyAgIGMwLTIuNDYzLTAuMDYzLTQuOTI1LTAuMjY3LTYuMzMzYy0wLjY0MS00LjQ1NC02Ljg5My01LjE2MS0xMC4wNTEtMi44ODFjLTAuOTkxLDAuNzEyLTEuNzQ4LDEuNjY1LTIuMTg4LDIuOTQ1ICAgYy0wLjQ0NCwxLjI4MS0wLjY2NSwzLjAzMS0wLjY2NSw1LjI1NHY3LjQxQzYxLjcxNCw4NS4yOTYsNzYuNjc2LDgzLjU1NSw3NC44OTEsNzIuOTZ6IE01NC44MzMsMzIuNzMyICAgYzAuMjY5LDAuNjU0LDAuNjg3LDEuMTg0LDEuMjU0LDEuNTg0YzAuNTYsMC4zOTQsMS4yNzYsMC41OTIsMi4xMzQsMC41OTJjMC43NTIsMCwxLjQxOC0wLjIwMywxLjk5OC0wLjYyMiAgIGMwLjU3OC0wLjQxNywxLjA2NS0xLjA0LDEuNDYzLTEuODcxbC0wLjA5OSwyLjA0Nmg1LjgxM1Y5Ljc0SDYyLjgydjE5LjI0YzAsMS4wNDItMC44NTgsMS44OTUtMS45MDcsMS44OTUgICBjLTEuMDQzLDAtMS45MDQtMC44NTMtMS45MDQtMS44OTVWOS43NGgtNC43NzZ2MTYuNjc0YzAsMi4xMjQsMC4wMzksMy41NCwwLjEwMiw0LjI1OEM1NC40LDMxLjM4NSw1NC41NjQsMzIuMDY5LDU0LjgzMywzMi43MzJ6ICAgIE0zNy4yMTcsMTguNzdjMC0yLjM3MywwLjE5OC00LjIyNiwwLjU5MS01LjU2MmMwLjM5Ni0xLjMzMSwxLjEwNy0yLjQwMSwyLjEzNy0zLjIwOGMxLjAyNy0wLjgxMSwyLjM0Mi0xLjIxNywzLjk0MS0xLjIxNyAgIGMxLjM0NSwwLDIuNDk3LDAuMjY0LDMuNDU5LDAuNzgxYzAuOTY3LDAuNTIsMS43MTMsMS4xOTUsMi4yMywyLjAyOGMwLjUyNywwLjgzNiwwLjg4NSwxLjY5NSwxLjA3NiwyLjU3NCAgIGMwLjE5NSwwLjg5MSwwLjI5MSwyLjIzNSwwLjI5MSw0LjA0OHY2LjI1MmMwLDIuMjkzLTAuMDkyLDMuOTgtMC4yNzEsNS4wNTFjLTAuMTc3LDEuMDc0LTAuNTU3LDIuMDctMS4xNDYsMy4wMDQgICBjLTAuNTgsMC45MjQtMS4zMjksMS42MTUtMi4yMzcsMi4wNTZjLTAuOTE4LDAuNDQ1LTEuOTY4LDAuNjYzLTMuMTU0LDAuNjYzYy0xLjMyNSwwLTIuNDQxLTAuMTgzLTMuMzYxLTAuNTY1ICAgYy0wLjkyMy0wLjM4LTEuNjM2LTAuOTUzLTIuMTQ0LTEuNzE0Yy0wLjUxMy0wLjc2Mi0wLjg3NC0xLjY5LTEuMDkyLTIuNzcyYy0wLjIxOS0xLjA4MS0wLjMyMy0yLjcwNy0wLjMyMy00Ljg3NEwzNy4yMTcsMTguNzcgICBMMzcuMjE3LDE4Ljc3eiBNNDEuNzcsMjguNTljMCwxLjQsMS4wNDIsMi41NDMsMi4zMTEsMi41NDNjMS4yNywwLDIuMzA4LTEuMTQzLDIuMzA4LTIuNTQzVjE1LjQzYzAtMS4zOTgtMS4wMzgtMi41NDEtMi4zMDgtMi41NDEgICBjLTEuMjY5LDAtMi4zMTEsMS4xNDMtMi4zMTEsMi41NDFWMjguNTl6IE0yNS42ODIsMzUuMjM1aDUuNDg0bDAuMDA2LTE4Ljk2bDYuNDgtMTYuMjQyaC01Ljk5OGwtMy40NDUsMTIuMDY0TDI0LjcxNSwwaC01LjkzNiAgIGw2Ljg5NCwxNi4yODRMMjUuNjgyLDM1LjIzNXoiIGZpbGw9IiNEODAwMjciLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
             <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDQzMC4xMTcgNDMwLjExNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjExNyA0MzAuMTE3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IlR3aXR0ZXJfX3gyOF9hbHRfeDI5XyIgZD0iTTM4MS4zODQsMTk4LjYzOWMyNC4xNTctMS45OTMsNDAuNTQzLTEyLjk3NSw0Ni44NDktMjcuODc2ICAgYy04LjcxNCw1LjM1My0zNS43NjQsMTEuMTg5LTUwLjcwMyw1LjYzMWMtMC43MzItMy41MS0xLjU1LTYuODQ0LTIuMzUzLTkuODU0Yy0xMS4zODMtNDEuNzk4LTUwLjM1Ny03NS40NzItOTEuMTk0LTcxLjQwNCAgIGMzLjMwNC0xLjMzNCw2LjY1NS0yLjU3Niw5Ljk5Ni0zLjY5MWM0LjQ5NS0xLjYxLDMwLjg2OC01LjkwMSwyNi43MTUtMTUuMjFjLTMuNS04LjE4OC0zNS43MjIsNi4xODgtNDEuNzg5LDguMDY3ICAgYzguMDA5LTMuMDEyLDIxLjI1NC04LjE5MywyMi42NzMtMTcuMzk2Yy0xMi4yNywxLjY4My0yNC4zMTUsNy40ODQtMzMuNjIyLDE1LjkxOWMzLjM2LTMuNjE3LDUuOTA5LTguMDI1LDYuNDUtMTIuNzY5ICAgQzI0MS42OCw5MC45NjMsMjIyLjU2MywxMzMuMTEzLDIwNy4wOTIsMTc0Yy0xMi4xNDgtMTEuNzczLTIyLjkxNS0yMS4wNDQtMzIuNTc0LTI2LjE5MiAgIGMtMjcuMDk3LTE0LjUzMS01OS40OTYtMjkuNjkyLTExMC4zNTUtNDguNTcyYy0xLjU2MSwxNi44MjcsOC4zMjIsMzkuMjAxLDM2LjgsNTQuMDhjLTYuMTctMC44MjYtMTcuNDUzLDEuMDE3LTI2LjQ3NywzLjE3OCAgIGMzLjY3NSwxOS4yNzcsMTUuNjc3LDM1LjE1OSw0OC4xNjksNDIuODM5Yy0xNC44NDksMC45OC0yMi41MjMsNC4zNTktMjkuNDc4LDExLjY0MmM2Ljc2MywxMy40MDcsMjMuMjY2LDI5LjE4Niw1Mi45NTMsMjUuOTQ3ICAgYy0zMy4wMDYsMTQuMjI2LTEzLjQ1OCw0MC41NzEsMTMuMzk5LDM2LjY0MkMxMTMuNzEzLDMyMC44ODcsNDEuNDc5LDMxNy40MDksMCwyNzcuODI4ICAgYzEwOC4yOTksMTQ3LjU3MiwzNDMuNzE2LDg3LjI3NCwzNzguNzk5LTU0Ljg2NmMyNi4yODUsMC4yMjQsNDEuNzM3LTkuMTA1LDUxLjMxOC0xOS4zOSAgIEM0MTQuOTczLDIwNi4xNDIsMzkzLjAyMywyMDMuNDg2LDM4MS4zODQsMTk4LjYzOXoiIGZpbGw9IiMzZWE0ZWQiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />

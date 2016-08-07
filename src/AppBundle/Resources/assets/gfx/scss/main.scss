@@ -8,6 +8,10 @@ header,footer,h1{
   font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
 }
 
+p{
+  font-family:'Conv_trade-gothic-light-1361519975',Sans-Serif;
+}
+
 html{
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -24,7 +28,7 @@ a{
   text-decoration: none;
 }
 
-article,.footer--container{
+article,.footer__container{
   margin: 0 auto;
 
   @include mobile{
@@ -43,7 +47,7 @@ article,.footer--container{
 article{
   @include mobile{
     margin-top: 25px;
-    &.menu-expanded{
+    &.menu--expanded{
       margin-top: 115px;
     }
   }
@@ -54,12 +58,12 @@ footer {
   margin: 25px -15px 0 -15px;
   border-top: 1px solid #c7c4c4;
   
-  .footer--container{
-    .footer--copyright{
+  .footer__container{
+    .footer__copyright{
       display: inline-block;
       margin-top: 20px;
     }
-    .footer--icons-social-media{
+    .footer__icons_social_media{
       display: inline;
       cursor: pointer;
       float:right;
