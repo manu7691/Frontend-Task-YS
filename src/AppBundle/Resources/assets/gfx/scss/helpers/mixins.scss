@@ -3,12 +3,32 @@ Mixins
 */
 
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin circle($s){
+  border-radius: 50%;
+  width: $s;
+  height: $s;
+}
+
+@mixin border-radius($r){
+  border-radius: $r;
+  -moz-border-radius: $r;
+  -webkit-border-radius: $r;
+}
+
 .btn {
   color: #ffffff;
   text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-family: 'Conv_trade-gothic-light-1361519975', Sans-Serif;
+  padding: 10px 10px;
+  border-radius: 2px;
+  font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
   font-size: 14px;
   cursor: pointer;
 }
