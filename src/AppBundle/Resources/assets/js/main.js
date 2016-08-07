@@ -49,4 +49,24 @@ $(function(){
         $itemsCart.html(numItemsCart);
         localStorage.setItem('items-cart',numItemsCart);
     })
+
+    // Menu expanded
+
+    $('.menu--hamburger').click(function(){
+        $menuMobile = $('.menu--items-mobile');
+        $article = $('article');
+        $iconHamburger = $('.menu--hamburger--icon');
+        $iconClose = $('.menu--hamburger-close--icon');
+        if($menuMobile.hasClass('is-expanded')){
+            $menuMobile.removeClass('is-expanded');
+            $article.removeClass('menu-expanded');
+            $iconHamburger.show();
+            $iconClose.hide();
+        }else{
+            $menuMobile.addClass('is-expanded');
+            $article.addClass('menu-expanded');
+            $iconHamburger.hide();
+            $iconClose.show();
+        }
+    });
 });

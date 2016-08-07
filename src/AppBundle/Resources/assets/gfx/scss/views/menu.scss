@@ -45,9 +45,10 @@ header {
 
     .menu--items{
       margin: 0 auto;
+      text-transform: uppercase;
 
       @include mobile{
-        width: 340px;
+        width: 90%;
       }
 
       @include tablet{
@@ -59,8 +60,9 @@ header {
       }
 
       .menu--logo{
+        font-size: 16px;
+        font-weight: bolder;
         @include mobile{
-          width: 72%;
           text-align: center;
           font-size: 17px;
         }
@@ -68,19 +70,39 @@ header {
       .menu--links-top{
         @include gt-mobile{
           display: inline-block;
-          li:hover{
-            text-decoration: underline;
+          a:hover{
+            padding-bottom: 5px;
+            border-bottom: 1px solid gray;
           }
         }
         @include mobile{
           display: none;
         }
       }
+      .menu--hamburger{
+        display: none;
+        float: left;
+        padding-left: 0;
+        @include mobile{
+          display: inline-block;
+        }
+        .menu--hamburger--icon,.menu--hamburger-close--icon{
+          height: 18px;
+        }
+        .menu--hamburger-close--icon{
+          display: none;
+          margin-left: -5px;
+        }
+
+      }
       .menu--shopping-cart{
         float:right;
         cursor: pointer;
         &:focus{
           outline: none;
+        }
+        &:hover{
+          opacity: 0.7;
         }
         @include mobile{
           padding-left: 0;
@@ -89,7 +111,8 @@ header {
           height: 18px;
         }
         .menu--shopping-cart--items-cart{
-          vertical-align: top;
+          position: relative;
+          bottom: 3px;
           margin-left: 5px;
           display: none;
         }
@@ -97,4 +120,24 @@ header {
 
     }
   }
+
+  .menu--items-mobile{
+    margin-top: 55px;
+    margin-right: -30px;
+    border-bottom: 1px solid #ccc;
+    background: rgba(128, 128, 128, 0.06);
+    display: none;
+    text-transform: uppercase;
+    &.is-expanded{
+      @include mobile{
+        display: block;
+      }
+    }
+    li{
+      display: block;
+      margin: 10px auto 10px auto;
+    }
+
+  }
+
 }

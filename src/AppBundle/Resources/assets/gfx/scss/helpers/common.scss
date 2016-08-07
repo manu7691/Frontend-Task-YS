@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.only-visible-mobile{
+  display: block;
+  @include gt-mobile{
+    display: none;
+  }
+}
+.hidden-mobile{
+  display: block;
+  @include mobile{
+    display: none;
+  }
+}

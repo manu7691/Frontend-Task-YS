@@ -1,8 +1,14 @@
 @import 'helpers/mixins';
+@import 'helpers/fonts';
+@import 'helpers/common';
 @import 'views/menu';
 @import 'views/home';
 
-html,body{
+header,footer,h1{
+  font-family:'Conv_trade-gothic-no-2-bold-1361519963 2',Sans-Serif;
+}
+
+html{
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -22,7 +28,7 @@ article,.footer--container{
   margin: 0 auto;
 
   @include mobile{
-    width: 340px;
+    width: 90%;
   }
 
   @include tablet{
@@ -32,7 +38,15 @@ article,.footer--container{
   @include desktop{
     width: 900px;
   }
+}
 
+article{
+  @include mobile{
+    margin-top: 25px;
+    &.menu-expanded{
+      margin-top: 115px;
+    }
+  }
 }
 
 footer {
